@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
-
-<table id="users-datatable" class= "table mb-2 dataTable" data-url="<%= users_path(format: :json) %>">
+<%= link_to 'New User', new_user_path, class: "btn btn-lg btn-primary float-right" %>
+<table id="users-datatable" class= "table mb-2 dataTable table-striped" data-url="<%= users_path(format: :json) %>">
   <thead>
     <tr>
       <th>ID</th>
@@ -11,8 +11,8 @@
       <th>Email</th>
       <th>Phone number</th>
       <th>Gender</th>
-      <th>Image</th>
-      <th>Actions</th>
+      <th class="no-sort">Image</th>
+      <th class="text-center no-sort">Actions</th>
     </tr>
   </thead>
 
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-lg btn-primary" %>

@@ -13,7 +13,8 @@ $(document).on('turbolinks:load', function(){
     pageLength: 25,
     columnDefs: [
       { order: [ 0, 'asc' ] },
-      { orderable: true, targets: [1,2,3,4,5,6] },
+      { "targets": 'no-sort',
+      "orderable": false },
     ],
     drawCallback: function( settings ) {
     }
