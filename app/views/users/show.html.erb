@@ -24,6 +24,14 @@
   <strong>Gender:</strong>
   <%= @user.gender %>
 </p>
+<p>
+  <strong>Image:</strong><br>
+  <% if @user.image.attached? %>
+    <%= image_tag @user.image, class: "w-25"%>
+  <%else%>
+    <%= image_tag asset_pack_path('media/images/profile.png'), class: "w-25"%>
+  <%end%>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
