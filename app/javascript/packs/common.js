@@ -6,10 +6,6 @@ $(document).on('turbolinks:load', function(){
     ajax: {
       url: $('.dataTable').data('url')
     },
-    language: {
-      paginate: {
-      }
-    },
     pageLength: 25,
     columnDefs: [
       { order: [ 0, 'asc' ] },
@@ -20,11 +16,6 @@ $(document).on('turbolinks:load', function(){
     }
   });
   
-  $('.filter').on('change', function() {
-    var val = $(this).val()
-    datatable.api().column($(this).attr('id')).search(val ?  val : '').draw();
-  });
-
   $('#search').on( 'keyup', function () {
     datatable.api().search($(this).val()).draw();
   } );

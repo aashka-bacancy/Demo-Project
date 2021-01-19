@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
-<%= link_to 'New User', new_user_path, class: "btn btn-lg btn-primary float-right" %>
+<%= link_to 'New User', new_user_path, class: "btn btn-lg btn-primary" %>
 <table id="users-datatable" class= "table mb-2 dataTable table-striped" data-url="<%= users_path(format: :json) %>">
   <thead>
     <tr>
