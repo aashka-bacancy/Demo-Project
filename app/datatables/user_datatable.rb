@@ -68,7 +68,7 @@ class UserDatatable < ApplicationDatatable
             image_tag(asset_pack_path('media/images/profile.png'))
           end
         end,
-        content_tag(:div, class: 'd-flex w-100') do
+        content_tag(:div, class: 'w-100') do
           concat(show_link(user_path(id: u)))
           concat(edit_link(edit_user_path(id: u)))
           concat(destroy_link(user_path(id: u)))
