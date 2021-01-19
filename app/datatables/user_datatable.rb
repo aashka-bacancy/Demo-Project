@@ -15,7 +15,7 @@ class UserDatatable < ApplicationDatatable
   def fetch_users
     search_string = []
     columns.map {|term| search_string << "#{term} like :search" }
-    users = User.all.order(sort_column(sortable_columns))
+    users = User.all.order("#{sort_column(sortable_columns)} #{sort_direction}")
     # for searching
     if @view.params.present? && @view.params[:search][:value].present?
       users = search_record(users, search_string)

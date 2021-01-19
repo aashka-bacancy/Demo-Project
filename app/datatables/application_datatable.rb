@@ -44,7 +44,7 @@ class ApplicationDatatable < AjaxDatatablesRails::ActiveRecord
   end
 
   def sort_direction
-    @view.params[:order]['0'][:dir] == 'asc' ? 'desc' : 'asc' if @view.params[:order].present?
+    @view.params[:order]['0'][:dir] == 'asc' ? 'asc' : 'desc' if @view.params[:order].present?
   end
 
   def show_link(view_link)

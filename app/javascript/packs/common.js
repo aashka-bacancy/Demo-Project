@@ -10,8 +10,11 @@ $(document).on('turbolinks:load', function(){
       paginate: {
       }
     },
-    "pageLength": 25,
-    order: [[0, 'asc']],
+    pageLength: 25,
+    columnDefs: [
+      { order: [ 0, 'asc' ] },
+      { orderable: true, targets: [1,2,3,4,5,6] },
+    ],
     drawCallback: function( settings ) {
     }
   });
