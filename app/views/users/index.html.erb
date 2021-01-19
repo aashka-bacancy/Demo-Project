@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table id="users-datatable" class= "table mb-2 dataTable" data-url="<%= users_path(format: :json) %>">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone number</th>
+      <th>Gender</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
